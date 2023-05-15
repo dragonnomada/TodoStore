@@ -32,6 +32,15 @@ public class TodoStore: ObservableObject {
     
     /**
      
+     Default initializer
+     
+     */
+    public init() {
+        
+    }
+    
+    /**
+     
      `addTodo` make a `TodoItem` and append to `todos` list
      
      - parameters:
