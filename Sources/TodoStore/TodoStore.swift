@@ -28,7 +28,7 @@ enum TodoStoreError: Error {
 public class TodoStore: ObservableObject {
     
     /// List of to-do items
-    @Published var todos: [TodoItem] = []
+    @Published public var todos: [TodoItem] = []
     
     /**
      
