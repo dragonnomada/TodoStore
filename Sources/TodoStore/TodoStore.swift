@@ -131,16 +131,15 @@ public class TodoStore: ObservableObject {
         
         if let title = title {
             todo.title = title
-            todo.updateAt = Date()
-            
-            todos[todoIndex] = todo
+//            todo.updateAt = Date()
         }
+        
         if let checked = checked {
             todo.checked = checked
-            todo.updateAt = Date()
-            
-            todos[todoIndex] = todo
+//            todo.updateAt = Date()
         }
+        
+        todos[todoIndex] = todo
         
         return todo
     }

@@ -25,8 +25,16 @@ import Foundation
 public struct TodoItem: Identifiable, Hashable, Equatable {
     
     public private(set) var id: UUID
-    public var title: String
-    public var checked: Bool
+    public var title: String {
+        didSet {
+            updateAt = Date()
+        }
+    }
+    public var checked: Bool {
+        didSet {
+            updateAt = Date()
+        }
+    }
     public private(set) var createAt: Date
     public var updateAt: Date?
     
