@@ -22,7 +22,7 @@ import Foundation
  - Author: Alan Badillo Salas
  
  */
-public struct TodoItem: Identifiable, Equatable {
+public struct TodoItem: Identifiable, Hashable, Equatable {
     
     public private(set) var id: UUID
     public var title: String
