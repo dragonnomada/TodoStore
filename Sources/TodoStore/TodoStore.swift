@@ -126,8 +126,8 @@ public class TodoStore: ObservableObject {
      
      */
     public func editTodo(withId id: UUID, title: String?, checked: Bool? = nil) throws -> TodoItem {
-        var todo = try getTodo(withId: id)
         let todoIndex = try getTodoIndex(withId: id)
+        var todo = try removeTodo(withId: id)
         
         if let title = title {
             todo.title = title
@@ -139,7 +139,7 @@ public class TodoStore: ObservableObject {
 //            todo.updateAt = Date()
         }
         
-        todos[todoIndex] = todo
+        todos.insert(todo, at: todoIndex)
         
         return todo
     }
